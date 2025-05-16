@@ -1,0 +1,36 @@
+#include <iostream>
+#include <locale>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    int habi=15;
+    int filhos= 0, soma_f= 0;
+    float maior_sal = 0.0, media_sal = 0.0, soma_s = 0.0 , media_f = 0.0, salarios=0.0;
+
+    for (int i = 0; i < habi; ++i) {
+        cout << "Digite o salário do habitante:"<< endl;
+        cin>> salarios;
+        cout<< "Digite o numeros de filhos do habitante:"<< endl<< endl;
+        cin>> filhos;
+
+        soma_s += salarios;
+        soma_f += filhos;
+        if (salarios > maior_sal) {
+            maior_sal = salarios;
+        }
+
+    }
+        media_sal = soma_s / habi;
+        media_f = static_cast<float>(soma_f) / habi;
+
+        cout<< "Média de salário da população é: R$"<<media_sal<<endl<< endl;
+        cout<< "Média do numero de filhos é:" << media_f<< endl<< endl;
+        cout<< "Maior sálario: R$" << maior_sal<<endl<< endl;
+
+
+
+    return 0;
+}

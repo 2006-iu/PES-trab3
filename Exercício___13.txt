@@ -1,0 +1,25 @@
+#include <iostream>
+#include <locale>
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int soma = 0, pares = 0, numeros, media;
+
+
+    cout << "Digite 20 números" << endl;
+    for (int i = 1; i<= 20; i++) {
+        cout<< "Numero:"<< i<< ":";
+        cin>>numeros;
+
+        if (numeros % 2 ==0) {
+            soma +=numeros;
+            pares++;
+        }
+    }
+
+    if (pares > 0) {
+        media = soma / pares;
+        cout<< "A media dos números pares é: " <<media<< endl;
+    }
+    return 0;
+}

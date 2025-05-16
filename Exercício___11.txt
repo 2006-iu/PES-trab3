@@ -1,0 +1,26 @@
+#include <iostream>
+#include <locale>
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "Portuguese");
+
+    int numero, negativos = 0;
+
+    cout << "Digite 15 números:" << endl;
+
+    for (int i = 1; i <= 15; i++) {
+        cout << "Número " << i << ": ";
+        cin >> numero;
+
+        if (numero < 0) {
+            negativos++;
+        }
+    }
+
+    cout << "Quantidade de números negativos digitados: " << negativos << endl;
+
+    return 0;
+}
+

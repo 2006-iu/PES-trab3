@@ -1,0 +1,26 @@
+#include <iostream>
+#include <locale>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    float per, ar, rai;
+    float pi=3.14;
+
+    setlocale (LC_ALL, "Portuguese");
+
+    cout << "Qual o raio do seu círculo:" << endl<< endl;
+    cin >> rai;
+
+    per= (2 * pi) * rai;
+    ar= pi * (rai * rai);
+
+    cout << fixed<< setprecision(2);
+
+    cout<< "A área do círculo é:" << ar<< endl<< endl;
+    cout<< "O perímetro do círculo é:"<<per<< endl<< endl;
+
+
+    return 0;
+}

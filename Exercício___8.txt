@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cctype>
+#include <locale>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    char sexo;
+    float pesoM, pesoF, altura;
+
+    cout << "Digite (M para masculino, F para feminino)" <<endl;
+    cin>> sexo;
+    cout<< "Digite a sua altura"<< endl;
+    cin>> altura;
+    sexo = toupper(sexo);
+
+    if( sexo == 'M')
+    {
+        pesoM = (72.7 * altura) - 58;
+        cout<<"O peso ideal é: "<<pesoM<< "KG"<<endl;
+    }
+     if( sexo == 'F')
+    {
+        pesoF = (62.1 * altura) - 44.7;
+        cout<<"O peso ideal é: "<<pesoF<< "KG"<<endl;
+    }
+    return 0;
+}

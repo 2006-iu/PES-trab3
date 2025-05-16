@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    string produto;
+    float valor_o, desconto,valorFinal;
+
+    cout << "Digite o nome do produto: ";
+    cin>>produto;
+
+    cout << "Digite o valor do produto: R$ ";
+    cin >> valor_o;
+
+    desconto = valor_o * 0.13;
+    valorFinal = valor_o - desconto;
+
+    cout << fixed << setprecision(2);
+
+    cout << "Produto: " << produto << endl;
+    cout << "Valor: R$ " << valor_o << endl;
+    cout << "Desconto: R$ " << desconto << endl;
+    cout << "Valor Final: R$ " << valorFinal << endl;
+
+    return 0;
+}

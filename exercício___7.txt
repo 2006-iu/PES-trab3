@@ -1,0 +1,78 @@
+#include <iostream>
+#include <locale>
+using namespace std;
+
+int main()
+{
+    int opc, quant;
+    float v;
+    setlocale(LC_ALL, "Portuguese");
+
+    cout << "Selecione a sua opção:" <<endl<< endl;
+
+    cout << "CACHORRO QUENTE:   digite 100." << endl;
+    cout << "BAURU SIMPLES:     digite 101."<< endl;
+    cout << "BAURU COM OVO:     digite 102."<< endl;
+    cout<<  "HAMBURGUER:        digite 103"<< endl;
+    cout << "CHEESEBURGUER:     digite 104"<< endl;
+    cout << "REFRIGERANTE LATA: digite 105."<< endl;
+    cout<<  "AGUA:              digite 106. "<< endl<< endl;
+    cin>> opc;
+
+
+    switch(opc) {
+    case 100:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 9.20;
+    cout << "Você escolheu "<<quant<<" cachorros quentes... o total foi R$"<< v<< endl;
+    break;
+
+    case 101:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 12;
+    cout << "Você escolheu "<<quant<<" bauru simples... o total foi R$"<< v<< endl;
+    break;
+
+    case 102:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 13;
+    cout << "Você escolheu "<<quant<<" baurus com ovo... o total foi R$"<< v<< endl;
+    break;
+
+    case 103:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 10;
+    cout << "Você escolheu "<<quant<<" hamburguer... o total foi R$"<< v<< endl;
+    break;
+
+    case 104:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 12;
+    cout << "Você escolheu "<<quant<<" cheeseburguer... o total foi R$"<< v<< endl;
+    break;
+
+    case 105:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 5;
+    cout << "Você escolheu "<<quant<<" refrigerante lata... o total foi R$"<< v<< endl;
+    break;
+
+    case 106:
+    cout << "Qual a qantidade:" << endl;
+    cin>> quant;
+    v = quant * 3;
+    cout << "Você escolheu"<<quant<<" agua... o total foi R$"<< v<< endl;
+    break;
+
+    default:
+     cout<< "OPÇÃO INVÁLIDA!!!"<< endl;
+     break;
+    }
+    return 0;
+}

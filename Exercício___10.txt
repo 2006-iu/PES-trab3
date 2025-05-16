@@ -1,0 +1,50 @@
+#include <iostream>
+#include <locale>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    string matricula;
+    char con;
+    float media= 0, soma= 0, n1,n2,n3;
+
+    cout << "Olá, informe seu número de matrícula:" << endl;
+    cin >>matricula;
+    cout << "Olá aluno(a), seja bem-vindo(a)...:"<< endl<<endl;
+
+    cout << "Digite suas três notas: " << endl<<endl;
+    cin>> n1>>n2>>n3;
+
+    media = (n1 * 1 + n2 * 2 + n3 * 3) / 6;
+
+    media = round(media);
+
+    if (media >= 9.0){
+        con = 'A';
+    }else if (media >= 7.5){
+        con = 'B';
+    }else if (media >= 6.0){
+        con = 'C';
+    }else if (media >= 4.0){
+        con = 'D';
+    }else {
+        con = 'E' ;
+        }
+
+        if ( con == 'A' || con == 'B' || con == 'C') {
+            cout<< endl<<"Você está APROVADO!!!"<< endl;
+        }
+        else {
+            cout <<endl<< "Você está REPROVADO!!!"<< endl;
+        }
+
+        cout <<"Número de matrícula: "<< matricula<< endl;
+        cout<< "Media Geral: " << media<<endl;
+        cout << "Conceito: " << con<< endl;
+
+    return 0;
+}
+

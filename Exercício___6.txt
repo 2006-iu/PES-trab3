@@ -1,0 +1,27 @@
+#include <iostream>
+#include <locale>
+using namespace std;
+
+int main()
+{
+    int numero;
+
+    setlocale(LC_ALL, "Portuguese");
+
+    cout<< "Digite um número:" << endl<< endl;
+    cin>>numero;
+
+    if (numero > 0)
+    {
+        cout<< "O número é positivo."<< endl;
+    }
+    if (numero < 0)
+    {
+        cout<< "O número é negativo."<< endl;
+    }
+    if (numero == 0)
+    {
+        cout<< "ZERO!!!"<< endl;
+    }
+    return 0;
+}
